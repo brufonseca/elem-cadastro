@@ -1,0 +1,62 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="elem-cadastro">
+  <template>
+    <custom-style> 
+      <style is="custom-style" include="iron-flex  iron-flex-alignment">
+        :host {
+          display: block;
+          background-color: purple;
+          height: 45%;
+          width: 40%;        
+        }
+        #fundo{
+          display:block;
+          background-color: palevioletred;
+          border-radius: 5px;
+          box-shadow: 3px 3px 2px 0px rgba(235,235,235,1);         
+          color:white;          
+        } 
+        #campos{
+          border-style: dashed;
+          border-color: green;
+          @apply --layout-horizontal;
+          @apply --layout-around-justified;
+        }    
+      </style>
+    </custom-style>
+    <div id="fundo">  
+      <div id="cabecalho" class="layout horizontal center-justified">
+        <h2>Formulário de cadastro</h2>
+      </div> 
+      <div id="campos">
+          <paper-input always-float-label label="Nome"></paper-input>
+          <paper-input always-float-label label="Sobrenome"></paper-input>
+      </div> 
+      
+    </div>
+   
+  </template>
+
+  <script>
+    /**
+     * `elem-cadastro`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ElemCadastro extends Polymer.Element {
+      static get is() { return 'elem-cadastro'; }
+      
+    }
+
+    window.customElements.define(ElemCadastro.is, ElemCadastro);
+  </script>
+</dom-module>
